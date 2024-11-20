@@ -17,8 +17,6 @@ public class Main {
         int index = 0;
         boolean flag = true;
 
-
-
         while (flag){
             Employee employee = Employee.getEmployeeInfo();
 
@@ -34,10 +32,22 @@ public class Main {
                 flag = false; // Exit loop
             }
         }
-        System.out.println("\nEmployee List:");
-        for (int i = 0; i < index; i++) {
-            System.out.println(empList[i]);
-        }
+        displayEmployees(index,empList);
         scan.close();
+    }
+
+    public static void displayEmployees(int index,Employee[] empList){
+        double getSalary = 0;
+        double avgSalary = 0;
+        for(int i = 0; i < index; i++){
+            Employee employee = empList[i];
+
+            getSalary += employee.getSalary();
+             avgSalary = getSalary / index;
+
+            System.out.println(employee);
+
+        }
+        System.out.println("Average Salary is : "+avgSalary);
     }
 }

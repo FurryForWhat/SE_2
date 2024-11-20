@@ -8,14 +8,20 @@ public class Employee {
     private String ph_num;
     private String dprt ;
     private double salary;
-//    public Employee(String name, String email, String ph_num, String dprt, double salary){
-//        this.name = name;
-//        this.email = email;
-//        this.ph_num = ph_num;
-//        this.dprt = dprt;
-//        this.salary = salary;
-//    }
 
+    public Employee(){
+
+    }
+    public Employee(String name, String email, String ph_num, String dprt, double salary){
+        this.name = name;
+        this.email = email;
+        this.ph_num = ph_num;
+        this.dprt = dprt;
+        this.salary = salary;
+    }
+    public Double getSalary(){
+        return this.salary;
+    }
     public static Employee getEmployeeInfo(){
      Scanner scan = new Scanner(System.in);
 
@@ -40,11 +46,11 @@ public class Employee {
         employee.ph_num = phNum;
         employee.salary = salary;
         employee.dprt = dprt;
-        System.out.println("Employee Name : "+employee.name);
-        System.out.println("Employee email : "+employee.email);
-        System.out.println("Employee Phone Number : "+employee.ph_num);
-        System.out.println("Employee Salary : "+employee.salary);
-        System.out.println("Employee Department : "+employee.dprt);
+//        System.out.println("Employee Name : "+employee.name);
+//        System.out.println("Employee email : "+employee.email);
+//        System.out.println("Employee Phone Number : "+employee.ph_num);
+//        System.out.println("Employee Salary : "+employee.salary);
+//        System.out.println("Employee Department : "+employee.dprt);
         return employee;
     }
 
